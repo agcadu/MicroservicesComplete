@@ -19,7 +19,7 @@ public class OrderServiceImpl implements IOrderService{
     private final WebClient.Builder webClientBuilder;
 
     @Override
-    public void placeOrder(OrderRequest orderRequest) {
+    public OrderResponse placeOrder(OrderRequest orderRequest) {
 
         BaseResponse result = webClientBuilder.build().post()
                 .uri("lb://inventory-service/api/inventory/in-stock")
@@ -34,10 +34,12 @@ public class OrderServiceImpl implements IOrderService{
             order.setOrderNumber(UUID.randomUUID().toString());
             order.setOrderItems(orderRequest.getOrderItems().stream()
                     .map(orderItemRequest -> mapOrderItemToOrderItem(orderItemRequest, order)).toList());
-            orderRepository.save(order);
+            var savedOrder = orderRepository.save(order);
+            return mapOrderToOrderResponse(savedOrder);
         } else {
             throw new IllegalArgumentException("Some items are not in stock");
         }
+
     }
 
     @Override
