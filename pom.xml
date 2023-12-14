@@ -26,6 +26,7 @@
 		<module>products</module>
 		<module>api-gateway</module>
 		<module>discovery-server</module>
+		<module>notification-server</module>
 	</modules>
 
 	<dependencies>
