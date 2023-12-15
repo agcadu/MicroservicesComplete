@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "d13655bd-7b41-41a8-86c8-5c054af006a2",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24393158",
+		"_collection_link": "https://lunar-crater-546608.postman.co/workspace/Team-Workspace~09b7adc2-4999-4880-8509-cbaed4e92cc0/collection/24393158-d13655bd-7b41-41a8-86c8-5c054af006a2?action=share&source=collection_link&creator=24393158"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Añadir producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\":\"245874\",\r\n    \"name\":\"Teclado 9\",\r\n    \"description\":\"Teclado mecanico Loogitec S900\",\r\n    \"price\":70.90,\r\n    \"status\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/products/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"products",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJIdnlZaWljeGpwNEhwN2RHOWFBV01sWExWdTBRNVBpYnpEZkV3SWNqaF9FIn0.eyJleHAiOjE3MDIyMzQ2NzYsImlhdCI6MTcwMjIzNDM3NiwiYXV0aF90aW1lIjoxNzAyMjMzMTE1LCJqdGkiOiI1YjFlM2RiMy1lMzcxLTRlNmYtODgxNS1hYjM5M2UzYmYyNDEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL21pY3Jvc2VydmljZXMtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYzc1MmJkOGEtYzc3Zi00NjRiLTkyMDEtMmE1NmNmNjU2ZDM2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibWljcm9zZXJ2aWNlc19jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiN2FjNjI2MjItZTY3YS00MTJiLTkzNDgtM2FmZTEzNDI3MzdmIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3Jvc2VydmljZXMtcmVhbG0iLCJBRE1JTiIsInVtYV9hdXRob3JpemF0aW9uIiwiVVNFUiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3YWM2MjYyMi1lNjdhLTQxMmItOTM0OC0zYWZlMTM0MjczN2YiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkFkbWluIFVzZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbl91c2VyIiwiZ2l2ZW5fbmFtZSI6IkFkbWluIiwiZmFtaWx5X25hbWUiOiJVc2VyIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.LfU8Jdulsp4dgD4PIMzCGSD-FTze5q6ux-gMBmS1nju97qqBK4hHjJrOMgd51_jJKZhIoUzsWW1_bo3FpXf7NFPxycF4KUOP_-MigqiLY9-BZOtCptzGG5_UfGQztlwYDdx3ZPHTcYhD-AcCnsRBrR6CQa_qvkLcqeZUgJFMB1CaEE7jYV5uKclmmdvSLWwFGy9utjScfw6zCfNLiGyw-Ms_pMSKlSNVn-kB-mcfaDwi6rKJFZtJfIn2lGIb9yGDm0eyaWX-Ph1lINd4CN6fjLuGMf5hD_w25hgRI6ssymlo5X_Cr6iOGdHZb4ep_ULVQBfCR7TlO6UmPb5D_zwwAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Place Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderItems\": [\r\n        {\r\n            \"sku\": \"00001\",\r\n            \"price\": 40,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/order/place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
+								"place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/order/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "circuitbreaker",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/order/circuitbreakers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"order",
+								"circuitbreakers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Is in Stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/inventory/00001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"inventory",
+								"00001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/product/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"product",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJIdnlZaWljeGpwNEhwN2RHOWFBV01sWExWdTBRNVBpYnpEZkV3SWNqaF9FIn0.eyJleHAiOjE3MDIyMzQyNzYsImlhdCI6MTcwMjIzMzk3NiwiYXV0aF90aW1lIjoxNzAyMjMzMTE1LCJqdGkiOiI0NjllNGQ3Mi05YzA5LTQ4OTgtYjIzOC03NTNhNWRjZWQ4Y2QiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODEvcmVhbG1zL21pY3Jvc2VydmljZXMtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYzc1MmJkOGEtYzc3Zi00NjRiLTkyMDEtMmE1NmNmNjU2ZDM2IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibWljcm9zZXJ2aWNlc19jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiN2FjNjI2MjItZTY3YS00MTJiLTkzNDgtM2FmZTEzNDI3MzdmIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIvKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3Jvc2VydmljZXMtcmVhbG0iLCJBRE1JTiIsInVtYV9hdXRob3JpemF0aW9uIiwiVVNFUiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI3YWM2MjYyMi1lNjdhLTQxMmItOTM0OC0zYWZlMTM0MjczN2YiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkFkbWluIFVzZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbl91c2VyIiwiZ2l2ZW5fbmFtZSI6IkFkbWluIiwiZmFtaWx5X25hbWUiOiJVc2VyIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.SDpGYgjY1KYedrt9YwC5lsteFssLAnS_FoUy4u08tPajFfWrGwqCXViS7vfiIa4m_iTx_33m772HYI5jhygbwcj1fdaQuzJ56mbN3K4kDVBP3c_JfhmSP5RAg6M4plXjgCp1vx6THGe7Ajh-DZJvbweVeWoUqhRf5k4SM3HOL-t1KUEFTwRyOQVieRi8gGbrelSsZPkkcoIDlcr1ldgOu0ijYAoGpcmGNVy45VdIpkJBKLYJDAAVjE_mrAFyvXnyKWDnLb1lv-9I9yWTMX6QWzipZmtlFmTflXHiBwyBFJ7D5at_NeYuwrqAtaUqt654PkzrgndFdYUfTsZFueO4Cg",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "openid",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "microservices_client",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "g3EBif5Mp5vCJyG8k3nTxw5lA0LeorJU",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "http://localhost:8181/realms/microservices-realm/protocol/openid-connect/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "http://localhost:8181/realms/microservices-realm/protocol/openid-connect/auth",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "http://localhost:8080/login/oauth2/code/keycloak",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "kc_token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
